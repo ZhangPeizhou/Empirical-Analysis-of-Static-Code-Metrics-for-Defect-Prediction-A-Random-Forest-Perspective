@@ -65,5 +65,3 @@ This project processes datasets, balances them using SMOTE, and evaluates result
   - Generates a comparison plot of accuracy across all groups and saves it as `accuracy_comparison.png`.
 
 ---
-
-## Folder Structure
