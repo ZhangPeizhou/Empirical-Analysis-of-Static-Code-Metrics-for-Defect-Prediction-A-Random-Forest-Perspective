@@ -6,15 +6,18 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import matplotlib.pyplot as plt
 from contextlib import redirect_stdout
 
-# Path to dataset directory
+# Path to dataset directory and result directory
 dataset_path = "Dataset/CSV only"
+result_path = "Result"
+os.makedirs(result_path, exist_ok=True)  # Ensure the Result folder exists
+
 group_files = ["group_1_SMOTE.csv", "group_2_SMOTE.csv", "group_3_SMOTE.csv", "group_4_SMOTE.csv", "group_5_SMOTE.csv"]
 
 # Dictionary to store results for comparison
 results = {}
 
 # File to save all results
-output_file = "result.txt"
+output_file = os.path.join(result_path, "result.txt")
 
 # Redirect print output to a file
 with open(output_file, "w") as f:
@@ -79,13 +82,13 @@ with open(output_file, "w") as f:
             print("\nFeature Importance:")
             print(importance_df)
 
-            # Plot feature importance (save and close)
+            # Plot feature importance (save to Result folder)
             plt.figure(figsize=(10, 6))
             plt.bar(importance_df['Feature'], importance_df['Importance'])
             plt.xticks(rotation=90)
             plt.title(f"Feature Importance for {group_file}")
-            # Save plot to a file
-            plot_file = group_file.replace(".csv", "_importance.png")
+            # Save plot to Result folder
+            plot_file = os.path.join(result_path, group_file.replace(".csv", "_importance.png"))
             plt.savefig(plot_file)
             print(f"Feature importance plot saved as {plot_file}")
             plt.close()  # Close the plot to free memory
@@ -95,14 +98,14 @@ with open(output_file, "w") as f:
         print("\nComparison of Results Across Groups:")
         print(results_df)
 
-        # Plot accuracy comparison (save and close)
+        # Plot accuracy comparison (save to Result folder)
         plt.figure(figsize=(10, 6))
         results_df['accuracy'].plot(kind='bar', title='Accuracy Comparison Across Groups')
         plt.ylabel('Accuracy')
         plt.xlabel('Groups')
         plt.xticks(rotation=45)
-        # Save accuracy plot to a file
-        accuracy_plot_file = "accuracy_comparison.png"
+        # Save accuracy plot to Result folder
+        accuracy_plot_file = os.path.join(result_path, "accuracy_comparison.png")
         plt.savefig(accuracy_plot_file)
         print(f"Accuracy comparison plot saved as {accuracy_plot_file}")
         plt.close()  # Close the plot

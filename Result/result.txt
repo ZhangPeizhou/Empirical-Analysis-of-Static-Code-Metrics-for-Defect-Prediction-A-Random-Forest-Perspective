@@ -38,7 +38,7 @@ Feature Importance:
 10                 b    0.028399
 13         lOComment    0.019023
 15  lOCodeAndComment    0.008369
-Feature importance plot saved as group_1_SMOTE_importance.png
+Feature importance plot saved as Result\group_1_SMOTE_importance.png
 
 Results for group_2_SMOTE.csv:
 Accuracy: 1.00
@@ -96,7 +96,7 @@ Feature Importance:
 8                    DECISION_COUNT    0.003470
 26             MAINTENANCE_SEVERITY    0.000820
 13                ESSENTIAL_DENSITY    0.000444
-Feature importance plot saved as group_2_SMOTE_importance.png
+Feature importance plot saved as Result\group_2_SMOTE_importance.png
 
 Results for group_3_SMOTE.csv:
 Accuracy: 0.86
@@ -155,7 +155,7 @@ Feature Importance:
 1                      BRANCH_COUNT    0.010073
 28         MODIFIED_CONDITION_COUNT    0.009624
 29         MULTIPLE_CONDITION_COUNT    0.008910
-Feature importance plot saved as group_3_SMOTE_importance.png
+Feature importance plot saved as Result\group_3_SMOTE_importance.png
 
 Results for group_4_SMOTE.csv:
 Accuracy: 0.93
@@ -212,7 +212,7 @@ Feature Importance:
 13             ESSENTIAL_COMPLEXITY    0.009358
 6             CYCLOMATIC_COMPLEXITY    0.007566
 26         MODIFIED_CONDITION_COUNT    0.006816
-Feature importance plot saved as group_4_SMOTE_importance.png
+Feature importance plot saved as Result\group_4_SMOTE_importance.png
 
 Results for group_5_SMOTE.csv:
 Accuracy: 1.00
@@ -268,7 +268,7 @@ Feature Importance:
 35                        LOC_TOTAL    0.003651
 14                   LOC_EXECUTABLE    0.003580
 12             ESSENTIAL_COMPLEXITY    0.000994
-Feature importance plot saved as group_5_SMOTE_importance.png
+Feature importance plot saved as Result\group_5_SMOTE_importance.png
 
 Comparison of Results Across Groups:
                    accuracy  precision    recall
@@ -277,4 +277,4 @@ group_2_SMOTE.csv  0.995213   0.995233  0.995213
 group_3_SMOTE.csv  0.863636   0.867212  0.863636
 group_4_SMOTE.csv  0.926350   0.930125  0.926350
 group_5_SMOTE.csv  0.995959   0.995991  0.995959
-Accuracy comparison plot saved as accuracy_comparison.png
+Accuracy comparison plot saved as Result\accuracy_comparison.png
