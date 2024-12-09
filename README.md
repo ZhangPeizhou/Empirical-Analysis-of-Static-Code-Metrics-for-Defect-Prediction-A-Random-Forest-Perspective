@@ -43,4 +43,27 @@ This project processes datasets, balances them using SMOTE, and evaluates result
 - **Process**:
   - Loads the grouped datasets and checks for the `defects` target column.
   - Balances the dataset by oversampling the minority class.
-  - Prints the cl
+  - Prints the class distribution before and after SMOTE.
+  - Assigns new unique IDs to the resampled data.
+- **Output**:
+  - Resampled datasets saved with `_SMOTE` added to the filenames (e.g., `group_1_SMOTE.csv`).
+  - Prints and logs the class distribution changes.
+
+### `step4_random_forest.py`
+
+- **Purpose**: Trains a Random Forest classifier on the balanced datasets and evaluates performance.
+- **Input**: Balanced datasets from the previous step (e.g., `group_1_SMOTE.csv`).
+- **Process**:
+  - Splits data into training and testing sets.
+  - Trains a Random Forest classifier on the training data.
+  - Predicts and evaluates the model's performance on the test data using metrics like accuracy, precision, recall, and a confusion matrix.
+  - Analyzes feature importance and visualizes it in bar plots.
+  - Compares model performance across groups.
+- **Output**:
+  - Logs evaluation metrics and feature importance for each group in `result.txt`.
+  - Saves feature importance bar plots for each group in the `Result` folder.
+  - Generates a comparison plot of accuracy across all groups and saves it as `accuracy_comparison.png`.
+
+---
+
+## Folder Structure
