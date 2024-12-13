@@ -1,67 +1,73 @@
-# Instruction for Running the Program
+# Random Forest and Hyperparameter Optimization Workflow
 
-This project processes datasets, balances them using SMOTE, and evaluates results using a Random Forest classifier. The program is structured into four sequential Python scripts.
-
-## Steps to Execute
-
-1. Run the Python scripts **step by step**, starting from `step1_data_grouping.py` and ending with `step4_random_forest.py`.
-2. The final results, including detailed metrics, feature importance, and comparison plots, will be stored in the **Result** folder.
+This project involves using a Random Forest classifier for defect prediction in software datasets. It includes preprocessing, hyperparameter optimization using Hill Climbing, and evaluation of the model with the optimized parameters.
 
 ---
 
-## Description of Each Python Script
+## Workflow Steps
 
-### `step1_data_grouping.py`
+### Step 1: Data Grouping
 
-- **Purpose**: Groups and combines related CSV files based on the configuration provided in `grouped_file_columns.csv`.
-- **Input**:
-  - A folder containing the dataset CSV files (`Dataset/CSV only`).
-  - A configuration file (`grouped_file_columns.csv`) listing file groups.
-- **Process**:
-  - Reads the grouping configuration.
-  - Combines the files belonging to each group into a single CSV.
-  - Saves the combined files with names derived from group names (e.g., `group_1.csv`, `group_2.csv`).
-- **Output**:
-  - Combined group files stored in the dataset folder.
-  - Prints row count statistics for each file and group.
+Script: `step1_data_grouping.py`
 
-### `step2_join_files.py`
-
-- **Purpose**: Combines grouped files into unified datasets for subsequent processing.
-- **Input**: Grouped files from the previous step (`group_1.csv`, `group_2.csv`, etc.).
-- **Process**:
-  - Merges grouped files as specified in the grouping configuration.
-  - Performs integrity checks, ensuring that all files exist.
-- **Output**:
-  - Merged datasets saved in the same folder.
-  - Provides summary statistics for the merged data.
-
-### `step3_SMOTE.py`
-
-- **Purpose**: Applies SMOTE (Synthetic Minority Oversampling Technique) to balance the datasets.
-- **Input**: Grouped files from the previous step.
-- **Process**:
-  - Loads the grouped datasets and checks for the `defects` target column.
-  - Balances the dataset by oversampling the minority class.
-  - Prints the class distribution before and after SMOTE.
-  - Assigns new unique IDs to the resampled data.
-- **Output**:
-  - Resampled datasets saved with `_SMOTE` added to the filenames (e.g., `group_1_SMOTE.csv`).
-  - Prints and logs the class distribution changes.
-
-### `step4_random_forest.py`
-
-- **Purpose**: Trains a Random Forest classifier on the balanced datasets and evaluates performance.
-- **Input**: Balanced datasets from the previous step (e.g., `group_1_SMOTE.csv`).
-- **Process**:
-  - Splits data into training and testing sets.
-  - Trains a Random Forest classifier on the training data.
-  - Predicts and evaluates the model's performance on the test data using metrics like accuracy, precision, recall, and a confusion matrix.
-  - Analyzes feature importance and visualizes it in bar plots.
-  - Compares model performance across groups.
-- **Output**:
-  - Logs evaluation metrics and feature importance for each group in `result.txt`.
-  - Saves feature importance bar plots for each group in the `Result` folder.
-  - Generates a comparison plot of accuracy across all groups and saves it as `accuracy_comparison.png`.
+- Groups raw CSV files based on predefined criteria.
+- Saves grouped files into the `Dataset` folder.
 
 ---
+
+### Step 2: Join Files
+
+Script: `step2_join_files.py`
+
+- Combines grouped files into larger datasets for each group (e.g., `group_1.csv`, `group_2.csv`).
+- Outputs these combined datasets into the `Dataset/CSV only` folder.
+
+---
+
+### Step 3: Apply SMOTE
+
+Script: `step3_SMOTE.py`
+
+- Balances the data in each group using the SMOTE technique.
+- Outputs balanced datasets as `group_1_SMOTE.csv`, `group_2_SMOTE.csv`, etc., in the `Dataset/CSV only` folder.
+
+---
+
+### Step 4: Hill Climbing for Hyperparameter Optimization
+
+Script: `step4_hill_climbing.py`
+
+- Uses the Hill Climbing algorithm to optimize hyperparameters for the Random Forest model.
+- Processes each SMOTE-balanced dataset (`group_1_SMOTE.csv`, `group_2_SMOTE.csv`, etc.).
+- Saves the best hyperparameters for each group in `Result/hill_climbing_results.txt`.
+- Progress is printed to the console and logged in the output file.
+
+---
+
+### Step 5: Random Forest with Optimized Parameters
+
+Script: `step5_random_forest.py`
+
+- Reads the best hyperparameters from `hill_climbing_results.txt` (generated in Step 4).
+- Trains and evaluates the Random Forest model using the best parameters for each group.
+- Outputs include:
+  - **Accuracy, Classification Report, and Confusion Matrix**: Saved to `Result/result.txt`.
+  - **Feature Importance Plots**: Saved as `group_1_SMOTE_importance.png`, `group_2_SMOTE_importance.png`, etc., in the `Result` folder.
+  - **Accuracy Comparison Plot**: Saved as `accuracy_comparison.png` in the `Result` folder.
+
+---
+
+## Requirements
+
+To run the scripts, ensure the following Python libraries are installed:
+
+- `pandas`
+- `scikit-learn`
+- `matplotlib`
+- `imbalanced-learn`
+
+Install all dependencies with:
+
+```bash
+pip install pandas scikit-learn matplotlib imbalanced-learn
+```

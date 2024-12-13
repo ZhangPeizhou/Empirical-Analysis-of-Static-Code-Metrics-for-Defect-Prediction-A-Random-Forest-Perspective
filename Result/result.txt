@@ -1,3 +1,7 @@
+Processing group_1_SMOTE.csv...
+No best hyperparameters found for group_1_SMOTE.csv. Using default settings.
+Training model for group_1_SMOTE.csv...
+Predicting results for group_1_SMOTE.csv...
 
 Results for group_1_SMOTE.csv:
 Accuracy: 0.88
@@ -38,7 +42,12 @@ Feature Importance:
 10                 b    0.028399
 13         lOComment    0.019023
 15  lOCodeAndComment    0.008369
+Saving feature importance plot for group_1_SMOTE.csv...
 Feature importance plot saved as Result\group_1_SMOTE_importance.png
+Processing group_2_SMOTE.csv...
+No best hyperparameters found for group_2_SMOTE.csv. Using default settings.
+Training model for group_2_SMOTE.csv...
+Predicting results for group_2_SMOTE.csv...
 
 Results for group_2_SMOTE.csv:
 Accuracy: 1.00
@@ -96,7 +105,12 @@ Feature Importance:
 8                    DECISION_COUNT    0.003470
 26             MAINTENANCE_SEVERITY    0.000820
 13                ESSENTIAL_DENSITY    0.000444
+Saving feature importance plot for group_2_SMOTE.csv...
 Feature importance plot saved as Result\group_2_SMOTE_importance.png
+Processing group_3_SMOTE.csv...
+No best hyperparameters found for group_3_SMOTE.csv. Using default settings.
+Training model for group_3_SMOTE.csv...
+Predicting results for group_3_SMOTE.csv...
 
 Results for group_3_SMOTE.csv:
 Accuracy: 0.86
@@ -155,7 +169,12 @@ Feature Importance:
 1                      BRANCH_COUNT    0.010073
 28         MODIFIED_CONDITION_COUNT    0.009624
 29         MULTIPLE_CONDITION_COUNT    0.008910
+Saving feature importance plot for group_3_SMOTE.csv...
 Feature importance plot saved as Result\group_3_SMOTE_importance.png
+Processing group_4_SMOTE.csv...
+No best hyperparameters found for group_4_SMOTE.csv. Using default settings.
+Training model for group_4_SMOTE.csv...
+Predicting results for group_4_SMOTE.csv...
 
 Results for group_4_SMOTE.csv:
 Accuracy: 0.93
@@ -212,7 +231,12 @@ Feature Importance:
 13             ESSENTIAL_COMPLEXITY    0.009358
 6             CYCLOMATIC_COMPLEXITY    0.007566
 26         MODIFIED_CONDITION_COUNT    0.006816
+Saving feature importance plot for group_4_SMOTE.csv...
 Feature importance plot saved as Result\group_4_SMOTE_importance.png
+Processing group_5_SMOTE.csv...
+No best hyperparameters found for group_5_SMOTE.csv. Using default settings.
+Training model for group_5_SMOTE.csv...
+Predicting results for group_5_SMOTE.csv...
 
 Results for group_5_SMOTE.csv:
 Accuracy: 1.00
@@ -268,13 +292,15 @@ Feature Importance:
 35                        LOC_TOTAL    0.003651
 14                   LOC_EXECUTABLE    0.003580
 12             ESSENTIAL_COMPLEXITY    0.000994
+Saving feature importance plot for group_5_SMOTE.csv...
 Feature importance plot saved as Result\group_5_SMOTE_importance.png
 
-Comparison of Results Across Groups:
+Comparing results across groups...
                    accuracy  precision    recall
 group_1_SMOTE.csv  0.883193   0.883212  0.883193
 group_2_SMOTE.csv  0.995213   0.995233  0.995213
 group_3_SMOTE.csv  0.863636   0.867212  0.863636
 group_4_SMOTE.csv  0.926350   0.930125  0.926350
 group_5_SMOTE.csv  0.995959   0.995991  0.995959
+Saving accuracy comparison plot...
 Accuracy comparison plot saved as Result\accuracy_comparison.png
