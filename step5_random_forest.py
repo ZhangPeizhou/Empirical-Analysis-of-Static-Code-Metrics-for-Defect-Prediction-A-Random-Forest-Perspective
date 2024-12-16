@@ -118,9 +118,9 @@ with open(output_file, "w") as f:
 
             # Plot feature importance
             print(f"Saving feature importance plot for {group_file}...")
-            plt.figure(figsize=(15, 8))
+            plt.figure(figsize=(8, 8))
             plt.bar(importance_df['Feature'], importance_df['Importance'])
-            plt.xticks(rotation=45, ha='right', fontsize=10)
+            plt.xticks(rotation=90, ha='right', fontsize=12)
             plt.title(f"Feature Importance for {group_file}")
             plt.tight_layout()
             plot_file = os.path.join(result_path, group_file.replace(".csv", "_importance.png"))
@@ -135,11 +135,11 @@ with open(output_file, "w") as f:
 
         # Plot accuracy comparison
         print("Saving accuracy comparison plot...")
-        plt.figure(figsize=(15, 8))
+        plt.figure(figsize=(8, 8)) 
         results_df['accuracy'].plot(kind='bar', title='Accuracy Comparison Across Groups')
-        plt.ylabel('Accuracy')
-        plt.xlabel('Groups')
-        plt.xticks(rotation=45)
+        plt.ylabel('Accuracy', fontsize=12)
+        plt.xlabel('Groups', fontsize=12)
+        plt.xticks(rotation=90, fontsize=12) 
         plt.tight_layout()
         accuracy_plot_file = os.path.join(result_path, "accuracy_comparison.png")
         plt.savefig(accuracy_plot_file)
