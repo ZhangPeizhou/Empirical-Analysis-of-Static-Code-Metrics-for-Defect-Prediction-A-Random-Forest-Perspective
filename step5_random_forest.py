@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import ast  # Safe eval for parsing strings to Python objects
+import joblib  # To save and load models
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
@@ -11,6 +12,8 @@ from contextlib import redirect_stdout
 dataset_path = "Dataset/CSV only"
 result_path = "Result"
 os.makedirs(result_path, exist_ok=True)  # Ensure the Result folder exists
+model_path = os.path.join(result_path, "models")  # Directory to store models
+os.makedirs(model_path, exist_ok=True)
 
 # File containing the unified best hyperparameters
 best_params_file = os.path.join(result_path, "unified_hill_climbing_results.txt")
@@ -79,6 +82,11 @@ with open(output_file, "w") as f:
             print(f"Training model for {group_file}...")
             rf_model = RandomForestClassifier(**unified_hyperparameters, random_state=42)
             rf_model.fit(X_train, y_train)
+
+            # Save the trained model
+            model_file = os.path.join(model_path, f"rf_model_{group_file.replace('.csv', '')}.pkl")
+            joblib.dump(rf_model, model_file)
+            print(f"Model for {group_file} saved as {model_file}")
 
             # Predict on the test set
             print(f"Predicting results for {group_file}...")
