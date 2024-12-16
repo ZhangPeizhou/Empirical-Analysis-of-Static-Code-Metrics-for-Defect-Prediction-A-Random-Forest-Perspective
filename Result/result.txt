@@ -1,245 +1,242 @@
+Using unified hyperparameters: {'n_estimators': 151, 'max_depth': 30, 'min_samples_split': 5, 'min_samples_leaf': 2, 'bootstrap': False}
+========================================
 Processing group_1_SMOTE.csv...
-No best hyperparameters found for group_1_SMOTE.csv. Using default settings.
 Training model for group_1_SMOTE.csv...
 Predicting results for group_1_SMOTE.csv...
 
 Results for group_1_SMOTE.csv:
-Accuracy: 0.88
+Accuracy: 0.8905
 Classification Report:
               precision    recall  f1-score   support
 
-       False       0.88      0.89      0.89      2411
-        True       0.89      0.88      0.88      2349
+       False       0.88      0.90      0.89      2411
+        True       0.90      0.88      0.89      2349
 
-    accuracy                           0.88      4760
-   macro avg       0.88      0.88      0.88      4760
-weighted avg       0.88      0.88      0.88      4760
+    accuracy                           0.89      4760
+   macro avg       0.89      0.89      0.89      4760
+weighted avg       0.89      0.89      0.89      4760
 
 Confusion Matrix:
-[[2144  267]
- [ 289 2060]]
+[[2176  235]
+ [ 286 2063]]
 
 Feature Importance:
              Feature  Importance
-0                loc    0.130983
-3                ivg    0.123480
-1                 vg    0.083724
-20       branchCount    0.069462
-2                evg    0.061155
-8                  i    0.042052
-12            lOCode    0.041371
-17         uniq_Opnd    0.040720
-9                  e    0.038757
-11                 t    0.038719
-5                  v    0.037877
-16           uniq_Op    0.036770
-7                  d    0.036193
-18          total_Op    0.036168
-4                  n    0.034151
-19        total_Opnd    0.032793
-14           lOBlank    0.030108
-6                  l    0.029728
-10                 b    0.028399
-13         lOComment    0.019023
-15  lOCodeAndComment    0.008369
+3                ivg    0.129506
+0                loc    0.124851
+1                 vg    0.088709
+20       branchCount    0.080897
+2                evg    0.062441
+17         uniq_Opnd    0.041893
+11                 t    0.039008
+9                  e    0.038749
+12            lOCode    0.037570
+8                  i    0.037202
+16           uniq_Op    0.036585
+5                  v    0.036537
+4                  n    0.034952
+7                  d    0.034878
+18          total_Op    0.034204
+19        total_Opnd    0.032166
+6                  l    0.030248
+14           lOBlank    0.028510
+10                 b    0.026888
+13         lOComment    0.017306
+15  lOCodeAndComment    0.006901
 Saving feature importance plot for group_1_SMOTE.csv...
 Feature importance plot saved as Result\group_1_SMOTE_importance.png
 Processing group_2_SMOTE.csv...
-No best hyperparameters found for group_2_SMOTE.csv. Using default settings.
 Training model for group_2_SMOTE.csv...
 Predicting results for group_2_SMOTE.csv...
 
 Results for group_2_SMOTE.csv:
-Accuracy: 1.00
+Accuracy: 0.9947
 Classification Report:
               precision    recall  f1-score   support
 
-       False       1.00      0.99      1.00      1880
-        True       0.99      1.00      1.00      1880
+       False       1.00      0.99      0.99      1880
+        True       0.99      1.00      0.99      1880
 
-    accuracy                           1.00      3760
-   macro avg       1.00      1.00      1.00      3760
-weighted avg       1.00      1.00      1.00      3760
+    accuracy                           0.99      3760
+   macro avg       0.99      0.99      0.99      3760
+weighted avg       0.99      0.99      0.99      3760
 
 Confusion Matrix:
-[[1865   15]
- [   3 1877]]
+[[1864   16]
+ [   4 1876]]
 
 Feature Importance:
                             Feature  Importance
-36                 PERCENT_COMMENTS    0.154406
-3              LOC_CODE_AND_COMMENT    0.106082
-18                 HALSTEAD_CONTENT    0.074526
-11                       EDGE_COUNT    0.068430
-29                       NODE_COUNT    0.068062
-35                  NUMBER_OF_LINES    0.058647
-33              NUM_UNIQUE_OPERANDS    0.057534
-0                         LOC_BLANK    0.036119
-17              GLOBAL_DATA_DENSITY    0.026432
-32                    NUM_OPERATORS    0.026288
-22                  HALSTEAD_LENGTH    0.025465
-31                     NUM_OPERANDS    0.025455
-30  NORMALIZED_CYLOMATIC_COMPLEXITY    0.023307
-25                  HALSTEAD_VOLUME    0.020249
-24               HALSTEAD_PROG_TIME    0.019078
-37                        LOC_TOTAL    0.018518
-14                   LOC_EXECUTABLE    0.017593
-7                CYCLOMATIC_DENSITY    0.017196
-20                  HALSTEAD_EFFORT    0.016488
-21               HALSTEAD_ERROR_EST    0.016462
-16           GLOBAL_DATA_COMPLEXITY    0.013899
-23                   HALSTEAD_LEVEL    0.013862
-4                      LOC_COMMENTS    0.012682
-34             NUM_UNIQUE_OPERATORS    0.012591
-19              HALSTEAD_DIFFICULTY    0.011907
-9                 DESIGN_COMPLEXITY    0.011691
-2                        CALL_PAIRS    0.009812
-5                   CONDITION_COUNT    0.005014
-1                      BRANCH_COUNT    0.004788
-10                   DESIGN_DENSITY    0.004119
-28         MULTIPLE_CONDITION_COUNT    0.004011
-12             ESSENTIAL_COMPLEXITY    0.003901
-27         MODIFIED_CONDITION_COUNT    0.003665
-15                  PARAMETER_COUNT    0.003507
-6             CYCLOMATIC_COMPLEXITY    0.003479
-8                    DECISION_COUNT    0.003470
-26             MAINTENANCE_SEVERITY    0.000820
-13                ESSENTIAL_DENSITY    0.000444
+36                 PERCENT_COMMENTS    0.145830
+3              LOC_CODE_AND_COMMENT    0.117356
+29                       NODE_COUNT    0.072966
+18                 HALSTEAD_CONTENT    0.060672
+35                  NUMBER_OF_LINES    0.057167
+33              NUM_UNIQUE_OPERANDS    0.053805
+11                       EDGE_COUNT    0.050742
+0                         LOC_BLANK    0.042878
+22                  HALSTEAD_LENGTH    0.031622
+31                     NUM_OPERANDS    0.029332
+17              GLOBAL_DATA_DENSITY    0.027516
+32                    NUM_OPERATORS    0.026948
+21               HALSTEAD_ERROR_EST    0.023886
+14                   LOC_EXECUTABLE    0.021495
+24               HALSTEAD_PROG_TIME    0.020188
+37                        LOC_TOTAL    0.019917
+4                      LOC_COMMENTS    0.019603
+30  NORMALIZED_CYLOMATIC_COMPLEXITY    0.018854
+7                CYCLOMATIC_DENSITY    0.017303
+20                  HALSTEAD_EFFORT    0.016052
+25                  HALSTEAD_VOLUME    0.015988
+23                   HALSTEAD_LEVEL    0.014583
+16           GLOBAL_DATA_COMPLEXITY    0.013108
+19              HALSTEAD_DIFFICULTY    0.013063
+9                 DESIGN_COMPLEXITY    0.012182
+34             NUM_UNIQUE_OPERATORS    0.011392
+2                        CALL_PAIRS    0.009527
+28         MULTIPLE_CONDITION_COUNT    0.005466
+1                      BRANCH_COUNT    0.005408
+5                   CONDITION_COUNT    0.004449
+12             ESSENTIAL_COMPLEXITY    0.004259
+10                   DESIGN_DENSITY    0.003799
+8                    DECISION_COUNT    0.003591
+6             CYCLOMATIC_COMPLEXITY    0.003007
+15                  PARAMETER_COUNT    0.002734
+27         MODIFIED_CONDITION_COUNT    0.002254
+26             MAINTENANCE_SEVERITY    0.000650
+13                ESSENTIAL_DENSITY    0.000409
 Saving feature importance plot for group_2_SMOTE.csv...
 Feature importance plot saved as Result\group_2_SMOTE_importance.png
 Processing group_3_SMOTE.csv...
-No best hyperparameters found for group_3_SMOTE.csv. Using default settings.
 Training model for group_3_SMOTE.csv...
 Predicting results for group_3_SMOTE.csv...
 
 Results for group_3_SMOTE.csv:
-Accuracy: 0.86
+Accuracy: 0.8409
 Classification Report:
               precision    recall  f1-score   support
 
-       False       0.90      0.83      0.86        23
-        True       0.83      0.90      0.86        21
+       False       0.94      0.74      0.83        23
+        True       0.77      0.95      0.85        21
 
-    accuracy                           0.86        44
-   macro avg       0.87      0.87      0.86        44
-weighted avg       0.87      0.86      0.86        44
+    accuracy                           0.84        44
+   macro avg       0.86      0.85      0.84        44
+weighted avg       0.86      0.84      0.84        44
 
 Confusion Matrix:
-[[19  4]
- [ 2 19]]
+[[17  6]
+ [ 1 20]]
 
 Feature Importance:
                             Feature  Importance
-7                CYCLOMATIC_DENSITY    0.058584
-4                      LOC_COMMENTS    0.051194
-18              GLOBAL_DATA_DENSITY    0.050639
-19                 HALSTEAD_CONTENT    0.042151
-31  NORMALIZED_CYLOMATIC_COMPLEXITY    0.039488
-35             NUM_UNIQUE_OPERATORS    0.036528
-37                 PERCENT_COMMENTS    0.036373
-25               HALSTEAD_PROG_TIME    0.035423
-23                  HALSTEAD_LENGTH    0.032542
-20              HALSTEAD_DIFFICULTY    0.032105
-26                  HALSTEAD_VOLUME    0.031603
-34              NUM_UNIQUE_OPERANDS    0.030129
-11                   DESIGN_DENSITY    0.029837
-3              LOC_CODE_AND_COMMENT    0.027426
-33                    NUM_OPERATORS    0.026543
-21                  HALSTEAD_EFFORT    0.026447
-30                       NODE_COUNT    0.025956
-0                         LOC_BLANK    0.024526
-36                  NUMBER_OF_LINES    0.024165
-27             MAINTENANCE_SEVERITY    0.023364
-9                  DECISION_DENSITY    0.022910
-8                    DECISION_COUNT    0.022593
-15                   LOC_EXECUTABLE    0.022186
-13             ESSENTIAL_COMPLEXITY    0.020652
-38                        LOC_TOTAL    0.019929
-12                       EDGE_COUNT    0.019522
-6             CYCLOMATIC_COMPLEXITY    0.019094
-22               HALSTEAD_ERROR_EST    0.017918
-5                   CONDITION_COUNT    0.017018
-24                   HALSTEAD_LEVEL    0.016862
-14                ESSENTIAL_DENSITY    0.015779
-32                     NUM_OPERANDS    0.015566
-17           GLOBAL_DATA_COMPLEXITY    0.014929
-10                DESIGN_COMPLEXITY    0.014452
-2                        CALL_PAIRS    0.014215
-16                  PARAMETER_COUNT    0.012743
-1                      BRANCH_COUNT    0.010073
-28         MODIFIED_CONDITION_COUNT    0.009624
-29         MULTIPLE_CONDITION_COUNT    0.008910
+4                      LOC_COMMENTS    0.074683
+18              GLOBAL_DATA_DENSITY    0.070626
+7                CYCLOMATIC_DENSITY    0.061803
+37                 PERCENT_COMMENTS    0.046359
+31  NORMALIZED_CYLOMATIC_COMPLEXITY    0.040813
+35             NUM_UNIQUE_OPERATORS    0.039805
+19                 HALSTEAD_CONTENT    0.037334
+33                    NUM_OPERATORS    0.034070
+3              LOC_CODE_AND_COMMENT    0.031092
+25               HALSTEAD_PROG_TIME    0.031089
+14                ESSENTIAL_DENSITY    0.030124
+21                  HALSTEAD_EFFORT    0.028968
+26                  HALSTEAD_VOLUME    0.028073
+20              HALSTEAD_DIFFICULTY    0.027041
+30                       NODE_COUNT    0.026469
+16                  PARAMETER_COUNT    0.026175
+38                        LOC_TOTAL    0.025938
+22               HALSTEAD_ERROR_EST    0.024920
+11                   DESIGN_DENSITY    0.024540
+23                  HALSTEAD_LENGTH    0.023533
+34              NUM_UNIQUE_OPERANDS    0.023248
+27             MAINTENANCE_SEVERITY    0.021269
+15                   LOC_EXECUTABLE    0.019237
+36                  NUMBER_OF_LINES    0.019222
+0                         LOC_BLANK    0.018097
+9                  DECISION_DENSITY    0.017417
+12                       EDGE_COUNT    0.016966
+32                     NUM_OPERANDS    0.016852
+24                   HALSTEAD_LEVEL    0.014692
+29         MULTIPLE_CONDITION_COUNT    0.012318
+17           GLOBAL_DATA_COMPLEXITY    0.012273
+5                   CONDITION_COUNT    0.011873
+6             CYCLOMATIC_COMPLEXITY    0.011464
+8                    DECISION_COUNT    0.010528
+2                        CALL_PAIRS    0.010028
+1                      BRANCH_COUNT    0.009083
+28         MODIFIED_CONDITION_COUNT    0.008212
+13             ESSENTIAL_COMPLEXITY    0.007360
+10                DESIGN_COMPLEXITY    0.006405
 Saving feature importance plot for group_3_SMOTE.csv...
 Feature importance plot saved as Result\group_3_SMOTE_importance.png
 Processing group_4_SMOTE.csv...
-No best hyperparameters found for group_4_SMOTE.csv. Using default settings.
 Training model for group_4_SMOTE.csv...
 Predicting results for group_4_SMOTE.csv...
 
 Results for group_4_SMOTE.csv:
-Accuracy: 0.93
+Accuracy: 0.9337
 Classification Report:
               precision    recall  f1-score   support
 
-       False       0.97      0.88      0.92       627
-        True       0.89      0.97      0.93       595
+       False       0.96      0.90      0.93       627
+        True       0.91      0.96      0.93       595
 
     accuracy                           0.93      1222
    macro avg       0.93      0.93      0.93      1222
-weighted avg       0.93      0.93      0.93      1222
+weighted avg       0.94      0.93      0.93      1222
 
 Confusion Matrix:
-[[554  73]
- [ 17 578]]
+[[567  60]
+ [ 21 574]]
 
 Feature Importance:
                             Feature  Importance
-35                 PERCENT_COMMENTS    0.098689
-0                         LOC_BLANK    0.079412
-3              LOC_CODE_AND_COMMENT    0.077649
-9                  DECISION_DENSITY    0.062190
-34                  NUMBER_OF_LINES    0.055166
-4                      LOC_COMMENTS    0.044704
-17                 HALSTEAD_CONTENT    0.035769
-5                   CONDITION_COUNT    0.035106
-25             MAINTENANCE_SEVERITY    0.031253
-7                CYCLOMATIC_DENSITY    0.030756
-29  NORMALIZED_CYLOMATIC_COMPLEXITY    0.029474
-11                   DESIGN_DENSITY    0.025280
-36                        LOC_TOTAL    0.024329
-27         MULTIPLE_CONDITION_COUNT    0.023739
-22                   HALSTEAD_LEVEL    0.022378
-19                  HALSTEAD_EFFORT    0.021907
-23               HALSTEAD_PROG_TIME    0.020847
-18              HALSTEAD_DIFFICULTY    0.019736
-20               HALSTEAD_ERROR_EST    0.019070
-31                    NUM_OPERATORS    0.018682
-16                  PARAMETER_COUNT    0.018509
-24                  HALSTEAD_VOLUME    0.018245
-32              NUM_UNIQUE_OPERANDS    0.017235
-15                   LOC_EXECUTABLE    0.016878
-30                     NUM_OPERANDS    0.016627
-21                  HALSTEAD_LENGTH    0.016366
-33             NUM_UNIQUE_OPERATORS    0.015872
-12                       EDGE_COUNT    0.012258
-10                DESIGN_COMPLEXITY    0.012169
-8                    DECISION_COUNT    0.012142
-28                       NODE_COUNT    0.012062
-2                        CALL_PAIRS    0.011930
-14                ESSENTIAL_DENSITY    0.010413
-1                      BRANCH_COUNT    0.009418
-13             ESSENTIAL_COMPLEXITY    0.009358
-6             CYCLOMATIC_COMPLEXITY    0.007566
-26         MODIFIED_CONDITION_COUNT    0.006816
+35                 PERCENT_COMMENTS    0.105706
+3              LOC_CODE_AND_COMMENT    0.100833
+0                         LOC_BLANK    0.079029
+9                  DECISION_DENSITY    0.070985
+34                  NUMBER_OF_LINES    0.054887
+4                      LOC_COMMENTS    0.039078
+17                 HALSTEAD_CONTENT    0.033267
+5                   CONDITION_COUNT    0.031200
+25             MAINTENANCE_SEVERITY    0.030202
+7                CYCLOMATIC_DENSITY    0.028781
+29  NORMALIZED_CYLOMATIC_COMPLEXITY    0.028635
+36                        LOC_TOTAL    0.027691
+11                   DESIGN_DENSITY    0.023784
+22                   HALSTEAD_LEVEL    0.023687
+27         MULTIPLE_CONDITION_COUNT    0.023230
+23               HALSTEAD_PROG_TIME    0.020737
+19                  HALSTEAD_EFFORT    0.020022
+18              HALSTEAD_DIFFICULTY    0.019249
+16                  PARAMETER_COUNT    0.017795
+31                    NUM_OPERATORS    0.016597
+24                  HALSTEAD_VOLUME    0.016352
+21                  HALSTEAD_LENGTH    0.016066
+8                    DECISION_COUNT    0.015745
+20               HALSTEAD_ERROR_EST    0.015143
+33             NUM_UNIQUE_OPERATORS    0.015118
+30                     NUM_OPERANDS    0.014922
+15                   LOC_EXECUTABLE    0.014863
+32              NUM_UNIQUE_OPERANDS    0.013619
+10                DESIGN_COMPLEXITY    0.013245
+12                       EDGE_COUNT    0.010258
+28                       NODE_COUNT    0.009927
+2                        CALL_PAIRS    0.009822
+14                ESSENTIAL_DENSITY    0.009687
+13             ESSENTIAL_COMPLEXITY    0.008709
+1                      BRANCH_COUNT    0.008234
+26         MODIFIED_CONDITION_COUNT    0.006769
+6             CYCLOMATIC_COMPLEXITY    0.006126
 Saving feature importance plot for group_4_SMOTE.csv...
 Feature importance plot saved as Result\group_4_SMOTE_importance.png
 Processing group_5_SMOTE.csv...
-No best hyperparameters found for group_5_SMOTE.csv. Using default settings.
 Training model for group_5_SMOTE.csv...
 Predicting results for group_5_SMOTE.csv...
 
 Results for group_5_SMOTE.csv:
-Accuracy: 1.00
+Accuracy: 0.9960
 Classification Report:
               precision    recall  f1-score   support
 
@@ -256,51 +253,51 @@ Confusion Matrix:
 
 Feature Importance:
                             Feature  Importance
-19               HALSTEAD_ERROR_EST    0.105967
-18                  HALSTEAD_EFFORT    0.098293
-3                      LOC_COMMENTS    0.086524
-17              HALSTEAD_DIFFICULTY    0.085080
-22               HALSTEAD_PROG_TIME    0.076605
-34                 PERCENT_COMMENTS    0.073693
-16                 HALSTEAD_CONTENT    0.047194
-28  NORMALIZED_CYLOMATIC_COMPLEXITY    0.036393
-23                  HALSTEAD_VOLUME    0.028176
-21                   HALSTEAD_LEVEL    0.027425
-29                     NUM_OPERANDS    0.027133
-8                  DECISION_DENSITY    0.026861
-32             NUM_UNIQUE_OPERATORS    0.024740
-20                  HALSTEAD_LENGTH    0.023812
-31              NUM_UNIQUE_OPERANDS    0.023435
-30                    NUM_OPERATORS    0.021605
-6                CYCLOMATIC_DENSITY    0.020526
-33                  NUMBER_OF_LINES    0.017821
-15                  PARAMETER_COUNT    0.015331
-10                   DESIGN_DENSITY    0.015302
-0                      BRANCH_COUNT    0.015088
-27                       NODE_COUNT    0.013513
-1                        CALL_PAIRS    0.013237
-24             MAINTENANCE_SEVERITY    0.010130
-11                       EDGE_COUNT    0.009805
-7                    DECISION_COUNT    0.009457
-5             CYCLOMATIC_COMPLEXITY    0.007985
-2              LOC_CODE_AND_COMMENT    0.007815
-9                 DESIGN_COMPLEXITY    0.006235
-25         MODIFIED_CONDITION_COUNT    0.004701
-26         MULTIPLE_CONDITION_COUNT    0.004125
-4                   CONDITION_COUNT    0.004109
-13                ESSENTIAL_DENSITY    0.003660
-35                        LOC_TOTAL    0.003651
-14                   LOC_EXECUTABLE    0.003580
-12             ESSENTIAL_COMPLEXITY    0.000994
+34                 PERCENT_COMMENTS    0.110733
+19               HALSTEAD_ERROR_EST    0.108995
+17              HALSTEAD_DIFFICULTY    0.099314
+22               HALSTEAD_PROG_TIME    0.076375
+18                  HALSTEAD_EFFORT    0.073837
+3                      LOC_COMMENTS    0.068885
+16                 HALSTEAD_CONTENT    0.043282
+28  NORMALIZED_CYLOMATIC_COMPLEXITY    0.036108
+8                  DECISION_DENSITY    0.032880
+21                   HALSTEAD_LEVEL    0.029179
+20                  HALSTEAD_LENGTH    0.029087
+23                  HALSTEAD_VOLUME    0.024457
+30                    NUM_OPERATORS    0.024104
+32             NUM_UNIQUE_OPERATORS    0.021869
+29                     NUM_OPERANDS    0.020207
+31              NUM_UNIQUE_OPERANDS    0.020019
+10                   DESIGN_DENSITY    0.019630
+33                  NUMBER_OF_LINES    0.017919
+27                       NODE_COUNT    0.017318
+6                CYCLOMATIC_DENSITY    0.016540
+1                        CALL_PAIRS    0.015471
+15                  PARAMETER_COUNT    0.013992
+11                       EDGE_COUNT    0.011893
+24             MAINTENANCE_SEVERITY    0.011061
+2              LOC_CODE_AND_COMMENT    0.006768
+5             CYCLOMATIC_COMPLEXITY    0.006674
+0                      BRANCH_COUNT    0.006523
+26         MULTIPLE_CONDITION_COUNT    0.006386
+7                    DECISION_COUNT    0.005715
+4                   CONDITION_COUNT    0.005077
+35                        LOC_TOTAL    0.004752
+25         MODIFIED_CONDITION_COUNT    0.004185
+13                ESSENTIAL_DENSITY    0.003580
+9                 DESIGN_COMPLEXITY    0.003479
+14                   LOC_EXECUTABLE    0.003099
+12             ESSENTIAL_COMPLEXITY    0.000607
 Saving feature importance plot for group_5_SMOTE.csv...
 Feature importance plot saved as Result\group_5_SMOTE_importance.png
 
 Comparing results across groups...
                    accuracy  precision    recall
-group_1_SMOTE.csv  0.883193   0.883212  0.883193
-group_2_SMOTE.csv  0.995213   0.995233  0.995213
-group_3_SMOTE.csv  0.863636   0.867212  0.863636
-group_4_SMOTE.csv  0.926350   0.930125  0.926350
+group_1_SMOTE.csv  0.890546   0.890695  0.890546
+group_2_SMOTE.csv  0.994681   0.994701  0.994681
+group_3_SMOTE.csv  0.840909   0.860820  0.840909
+group_4_SMOTE.csv  0.933715   0.935596  0.933715
 group_5_SMOTE.csv  0.995959   0.995991  0.995959
 Saving accuracy comparison plot...
 Accuracy comparison plot saved as Result\accuracy_comparison.png

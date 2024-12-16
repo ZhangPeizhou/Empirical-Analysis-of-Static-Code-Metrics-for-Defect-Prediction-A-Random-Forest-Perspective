@@ -37,19 +37,20 @@ Script: `step3_SMOTE.py`
 
 Script: `step4_hill_climbing.py`
 
-- Uses the Hill Climbing algorithm to optimize hyperparameters for the Random Forest model.
-- Processes each SMOTE-balanced dataset (`group_1_SMOTE.csv`, `group_2_SMOTE.csv`, etc.).
-- Saves the best hyperparameters for each group in `Result/hill_climbing_results.txt`.
-- Progress is printed to the console and logged in the output file.
+- Uses the Hill Climbing algorithm to find a single, unified set of optimized hyperparameters for the Random Forest model.
+- Evaluates the same set of hyperparameters across all SMOTE-balanced datasets (`group_1_SMOTE.csv`, `group_2_SMOTE.csv`, etc.).
+- Saves the best unified hyperparameters in `Result/unified_hill_climbing_results.txt`.
+- Progress, including average accuracy for each iteration, is printed to the console and logged.
+- An **accuracy progress plot** (`unified_accuracy_progress.png`) is saved to visualize the optimization process.
 
 ---
 
-### Step 5: Random Forest with Optimized Parameters
+### Step 5: Random Forest with Unified Optimized Parameters
 
 Script: `step5_random_forest.py`
 
-- Reads the best hyperparameters from `hill_climbing_results.txt` (generated in Step 4).
-- Trains and evaluates the Random Forest model using the best parameters for each group.
+- Reads the unified best hyperparameters from `unified_hill_climbing_results.txt` (generated in Step 4).
+- Trains and evaluates the Random Forest model **using the same optimized parameters** across all groups.
 - Outputs include:
   - **Accuracy, Classification Report, and Confusion Matrix**: Saved to `Result/result.txt`.
   - **Feature Importance Plots**: Saved as `group_1_SMOTE_importance.png`, `group_2_SMOTE_importance.png`, etc., in the `Result` folder.
